@@ -156,9 +156,13 @@ const TestimonialScroller = () => {
   }, []);
 
   return (
-   <div className="min-w-screen py-10 overflow-hidden font-orbitron">
+    <div className=" min-w-screen py-20 overflow-hidden font-orbitron"
+      style={{
+      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 1, 0.8)), url('./Images/gym4.avif')`,
+    }}
+    >
       <div className="mb-10" ref={titleRef}>
-        <h1 className="text-5xl tracking-wider font-bold mb-2 text-white text-center">
+        <h1 className="text-5xl tracking-wider font-bold mb-2 text-white text-center z-50">
           What people say
         </h1>
       </div>
