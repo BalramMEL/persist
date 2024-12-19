@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .nav-hover-btn {
+    @apply relative ms-10 cursor-pointer;
+  }
+}
+
+/* CSS for infinite scrolling */
+.scroll-left {
+  animation-name: scrollLeft;
+  animation-duration: 16s; /* Adjust as needed */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.scroll-right {
+  animation-name: scrollRight;
+  animation-duration: 16s; /* Adjust as needed */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Adjust based on the size of your content */
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%); /* Adjust based on the size of your content */
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+
+.marquee-left {
+  animation: marquee-left 5s linear infinite;
+}
+
+.marquee-right {
+  animation: marquee-right 5s linear infinite;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
