@@ -54,9 +54,11 @@
   animation: marquee 20s linear infinite;
 }
 
-
 .marquee-left {
   animation: marquee-left 5s linear infinite;
+}
+.marquee-scroll {
+  animation: marquee-left 15s linear infinite;
 }
 
 .marquee-right {
@@ -64,6 +66,15 @@
 }
 
 @keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-scroll {
   0% {
     transform: translateX(0%);
   }
